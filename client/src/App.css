@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;800&display=swap');
+* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.custom-background {
+    /* background-image: url('../src/assets/hero.jpg'); */
+    background-size: cover;
+    width: auto;
+    height: 900px;
+}
+
