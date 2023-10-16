@@ -11,7 +11,8 @@ const Login = () => {
   const [formValues, setFormValues] = useState(initialValues);
 
   const handleChange = (e) => {
-    setFormValues(e.target.value);
+    const { name, value } = e.target;
+    setFormValues({ ...formValues, [name]: value });
   };
   return (
     <>
@@ -21,7 +22,7 @@ const Login = () => {
           <h1 className="text-4xl text-center mb-4">Login</h1>
           <form className="max-w-md mx-auto">
             <div className="field">
-              <label className="">Email</label>
+              <label className="font-bold">Email</label>
               <input
                 className="w-full border my-2 py-2 px-3 rounded-lg"
                 placeholder="your@email.com"
@@ -33,7 +34,7 @@ const Login = () => {
             </div>
 
             <div className="field">
-              <label>Password</label>
+              <label className="font-bold">Password</label>
               <input
                 className="w-full border my-2 py-2 px-3 rounded-lg"
                 placeholder="Password"

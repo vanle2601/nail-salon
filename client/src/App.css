@@ -15,3 +15,10 @@ body {
     height: 900px;
 }
 
+.menu-item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 30px;
+  }
+
