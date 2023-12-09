@@ -14,6 +14,7 @@ const Register = () => {
     password: "",
   };
   const [formValues, setFormValues] = useState(initialValues);
+  const notify = () => toast("Register Succesfully. Login now!");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,9 +28,9 @@ const Register = () => {
       email: formValues.email,
       password: formValues.password,
     });
-  }
 
-  const notify = () => toast("Register Succesfully. Login now!");
+    notify();
+  }
 
   return (
     <>
@@ -78,10 +79,7 @@ const Register = () => {
                 onChange={handleChange}
               />
             </div>
-            <button
-              onClick={notify}
-              className="w-full bg-button-pink mt-2 p-3 rounded-xl"
-            >
+            <button className="w-full bg-button-pink mt-2 p-3 rounded-xl">
               Register
             </button>
             <div className="mt-2 text-center text-gray-500">

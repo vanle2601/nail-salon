@@ -2,6 +2,10 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const initialValues = {
@@ -14,13 +18,35 @@ const Login = () => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
+
+  async function handleLoginSubmit(e) {
+    e.preventDefault();
+    try {
+      const response = await axios.post("/login", {
+        email: formValues.email,
+        password: formValues.password,
+      });
+
+      if (response.data.status === "pass ok") {
+        toast.success("Login Successful");
+      } else if (response.data === "not found") {
+        toast.error(response.data.message || "Login Failed");
+      } else {
+        toast.error(response.data.message || "Login Failed");
+      }
+    } catch (error) {
+      toast.error("Login Failed");
+      console.log(error);
+    }
+  }
+
   return (
     <>
       <NavBar />
       <div className="flex flex-direction-col justify-center justify-around items-center min-h-screen p-4 mx-5 grow">
         <div className="-mt-64">
           <h1 className="text-4xl text-center mb-4">Login</h1>
-          <form className="max-w-md mx-auto">
+          <form onSubmit={handleLoginSubmit} className="max-w-md mx-auto">
             <div className="field">
               <label className="font-bold">Email</label>
               <input
@@ -52,6 +78,16 @@ const Login = () => {
               <Link className="text-button-pink px-1" to="/register">
                 Register Now
               </Link>
+              <ToastContainer
+                position="bottom-center"
+                autoClose={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                theme="dark"
+              />
             </div>
           </form>
         </div>

@@ -4,7 +4,7 @@ const MenuItemCard = ({ item }) => {
   return (
     <>
       <div className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-        <div className="bg-white rounded-lg shadow-lg">
+        <div className="bg-white rounded-lg shadow-lg h-full">
           <img
             src={item.img}
             alt={item.name}

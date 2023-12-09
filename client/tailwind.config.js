@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {},
     colors: {
+      white: "#ffffff",
       pink: "#fecaca",
       "button-pink": "#fda4af",
     },

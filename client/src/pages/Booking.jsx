@@ -1,14 +1,24 @@
 import React from "react";
+import { InlineWidget } from "react-calendly";
+import NavBar from "../components/NavBar";
 
-const Booking = () => {
+const App = () => {
   return (
-    <>
+    <div className="App">
       <NavBar />
-      <div className="">
-        <h1>Booking</h1>
-      </div>
-    </>
+      <>
+        <InlineWidget
+          url="https://calendly.com/sixteennailbar"
+          branding={{
+            poweredBy: false,
+          }}
+          pageSettings={{
+            primaryColor: "#fda4af",
+          }}
+        />
+      </>
+    </div>
   );
 };
 
-export default Booking;
+export default App;
