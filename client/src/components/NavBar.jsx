@@ -19,7 +19,7 @@ const NavBar = () => {
 
         {/* Hamburger icon for small screens */}
         <div
-          className="sm:hidden cursor-pointer fixed left-80 top-24 bottom-18"
+          className="sm:hidden cursor-pointer fixed right-5 top-24 bottom-18"
           onClick={toggleMenu}
         >
           <svg
@@ -62,7 +62,7 @@ const NavBar = () => {
 
         {/* Hamburger menu items for small screens */}
         <div
-          className={`sm:hidden fixed left-24 top-32 bottom-18 bg-pink px-2 py-3 w-64 overflow-y-auto ${
+          className={`sm:hidden fixed right-5 top-32 bottom-18 bg-pink px-2 py-3 w-64 overflow-y-auto ${
             isMenuOpen ? "block" : "hidden"
           }`}
         >
