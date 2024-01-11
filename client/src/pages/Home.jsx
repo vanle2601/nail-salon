@@ -6,7 +6,7 @@ import Footer from "../components/Footer";
 const Home = () => {
   return (
     <>
-      <div className="max-h-screen">
+      <div className="min-h-screen">
         <NavBar />
         <div className="custom-background items-center justify-center h-screen py-4">
           <h1 className="text-4xl italic text-gray-900 sm:text-6xl mt-20 text-center">

@@ -8,7 +8,7 @@ const Footer = () => {
           href="https://www.instagram.com/16.nailbar/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-row text-white hover:text-gray-400"
+          className="flex flex-row text-black hover:text-gray-400"
         >
           <span>Follow us</span>
 
@@ -24,7 +24,7 @@ const Footer = () => {
           </svg>
         </a>
         <div>
-          <p className="text-white">Phone: 0433 020 223</p>
+          <p className="text-black">Phone: 0433 020 223</p>
         </div>
       </div>
     </footer>
