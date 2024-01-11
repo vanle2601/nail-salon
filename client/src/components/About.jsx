@@ -4,26 +4,25 @@ import demo1 from "../assets/hero.jpg";
 const About = () => {
   return (
     <>
-      <div className="items-center justify-center mt-4 mb-6 px-48">
-        <div className="grid grid-cols-2 gap-2 text-center mx-6 sm:flex flex-col">
-          <div className="lg:header flex flex-col sm:text-left">
-            <h1 className="text-3xl font-bold mb-2">Meet Katheryn</h1>
-            <img
-              className="w-80 h-auto mx-auto lg:self-end hidden lg:block"
-              src={demo1}
-              alt="Katheryn's Image"
-            />
-          </div>
-
-          <div className="description items-center mx-8 mt-10 text-left">
-            <p className="text-lg">
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
+          <div className="max-w-md text-center md:text-left md:mr-6">
+            <h2 className="text-3xl font-bold mb-4">Meet Katheryn</h2>
+            <p className="text-gray-700 mb-6">
               Friendly and professional, Katheryn tailors her services to
               clients' preferences, skin types, and desired nail designs. Her
               warm demeanor ensures a satisfying experience.
             </p>
           </div>
+          <div className="mt-6 md:mt-0">
+            <img
+              src={demo1}
+              alt="Katheryn's Photo"
+              className="rounded-full w-32 h-32 object-cover mx-auto md:mx-0"
+            />
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

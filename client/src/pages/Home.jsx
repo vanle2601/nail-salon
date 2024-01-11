@@ -2,7 +2,7 @@ import React from "react";
 import NavBar from "../components/NavBar";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-
+import About from "../components/About";
 const Home = () => {
   return (
     <>
@@ -36,7 +36,7 @@ const Home = () => {
             </div>
           </Link>
         </div>
-
+        <About />
         <Footer />
       </div>
     </>
